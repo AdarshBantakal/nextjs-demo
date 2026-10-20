@@ -1,4 +1,8 @@
 import Image from "next/image";
+import { Greet } from "@/app/components/greet";
+import { Counter } from "@/app/components/counter";
+import ForgotPassword from "./(auth)/forgot-password/page";
+import Register from "./(auth)/register/page";
 
 export default function Home() {
   return (
@@ -12,6 +16,10 @@ export default function Home() {
           height={20}
           priority
         />
+        <Greet />
+        <Counter />
+        <Register/>
+        <ForgotPassword />
         <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
           <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
             To get started, edit the{" "}
@@ -36,6 +44,7 @@ export default function Home() {
               Learning
             </a>{" "}
             center.
+            
           </p>
         </div>
         <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
